@@ -1,0 +1,45 @@
+
+</html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full View: Flower</title>
+  <style>
+    /* Atur body agar gambar tampil full dan center */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000; /* Latar belakang gelap agar fokus pada gambar */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    /* Gaya gambar agar tidak melebihi layar */
+    img.full-image {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    /* Tombol kembali */
+    .back-link {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 5px 10px;
+      border-radius: 5px;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <a class="back-link" href="birthday_message.html">← Kembali</a>
+  <img class="full-image" src="IMG_20250228_100117-removebg-preview.png" alt="Full Flower Image">
+</body>
+</html>

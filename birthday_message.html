@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untukmu di Hari Spesial Ini</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <canvas id="stars"></canvas> <!-- Efek Bintang Bergerak -->
+
+  <!-- Audio Musik -->
+  <audio id="background-music" loop>
+      <source src="music.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+  </audio>
+
+  <!-- Tombol Musik -->
+  <button id="music-btn">
+      <img id="music-icon" src="mute.png" alt="Play Music">
+  </button>
+
+  <script>
+    // Ambil elemen audio, tombol, dan ikon
+    const music = document.getElementById("background-music");
+    const musicBtn = document.getElementById("music-btn");
+    const musicIcon = document.getElementById("music-icon");
+
+    let isPlaying = false;
+
+    // Fungsi toggle musik
+    function toggleMusic() {
+      if (isPlaying) {
+        music.pause();
+        musicIcon.src = "mute.png"; // Tampilkan ikon play
+      } else {
+        music.play().catch(error => console.log("Autoplay tidak diizinkan:", error));
+        musicIcon.src = "sound.png"; // Tampilkan ikon mute
+      }
+      isPlaying = !isPlaying;
+    }
+
+    // Event listener untuk tombol musik
+    musicBtn.addEventListener("click", toggleMusic);
+  </script>
+
+
+    <div class="main-container">
+        <h1 class="fade-in-text">Happy Birthday </h1>
+        <p class="fade-in-text">Today is yours. May every second bring you the happiness you always spread to others.</p>
+
+        <!-- About You -->
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About Nadine Zahrani</h2>
+                <p>You're a mystery that never ceases to amaze. They say you like to eat scorpions-honestly, I don't know if that's a myth or a fact, but if it's true, then you're brave. But if not, well... at least you managed to make me believe.
+
+I know, the past leaves traces that are hard to erase. Trust issues are not just words, but wounds that don't heal with "time will heal everything." I'm not here to convince you that the world is always good, or that everyone can be trusted. I'm just saying that you don't have to go through everything alone.
+
+Like Summer in 500 Days of Summer, you have your own path, and I'll never be the one to force it. I just hope that wherever you go, you find happiness that is truly yours. If one day you look back, I hope what you remember is not fear, but that there was once someone who genuinely wished you well.
+</p>
+            </div>
+            <div class="about-photo">
+                <img src="402696021_872151987959031_5682172802180680223_n.jpg" alt="Foto Kamu" class="photo">
+            </div>
+        </div>
+
+        <!-- Galeri Foto -->
+        <div class="gallery">
+            <div class="photo-container">
+                <img src="IMG_20250228_072536.jpg" alt="Foto waktu kecil" class="photo">
+                <p class="caption">Dari dulu hingga sekarang, kamu tetap istimewa.</p>
+            </div>
+            <div class="photo-container">
+                <img src="IMG_20250228_072609.jpg" alt="Foto 2" class="photo">
+                <p class="caption">Tersenyumlah, dunia lebih indah dengan senyummu.</p>
+            </div>
+            <div class="photo-container">
+                <img src="IMG_20250228_084716.jpg" alt="Foto 3" class="photo">
+                <p class="caption">Selalu ada seseorang yang mendoakan kebaikan untukmu.</p>
+            </div>
+        </div>
+
+        <!-- Tombol Pesan Tersembunyi -->
+        <button class="btn" onclick="revealMessage()">Klik di sini untuk membaca sesuatu</button>
+        <div class="hidden-message-container" id="hiddenMessage">
+            <p>Happy Birthday! Semoga hidupmu seindah drama Korea, tapi tanpa plot twist yang nyakitin. Semoga bahagiamu sebesar wishlist-mu, dan semoga semua kejadian absurd di hidupmu bisa jadi cerita lucu yang kita ketawakan bareng suatu hari nanti. Tetap jadi kamu yang unik, luar biasa, dan sedikit—atau mungkin banyak—nggak masuk akal. Have a great one!.</p>
+        </div>
+        <div class="flower-header">
+          <a href="flower.html">
+    <img src="IMG_20250228_100117-removebg-preview.png" alt="Dekorasi Bunga">
+</div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Created with Love</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
